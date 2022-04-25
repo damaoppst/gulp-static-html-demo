@@ -67,8 +67,7 @@ gulp.task("watchs", function () {
   gulp.watch("src/*.html", gulp.series("html"));
   gulp.watch("src/static/scss/*.scss", gulp.series(
     "scss",
-    gulp.parallel("css"),
-    gulp.parallel("connect")
+    gulp.parallel("css")
   ));
 });
 
