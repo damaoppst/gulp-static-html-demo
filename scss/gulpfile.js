@@ -65,7 +65,11 @@ gulp.task("clean", function () {
 
 gulp.task("watchs", function () {
   gulp.watch("src/*.html", gulp.series("html"));
-  // gulp.watch("src/static/css/*.css", gulp.series("css"));
+  gulp.watch("src/static/scss/*.scss", gulp.series(
+    "scss",
+    gulp.parallel("css"),
+    gulp.parallel("connect")
+  ));
 });
 
 gulp.task(
