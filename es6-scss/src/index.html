@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    @@include('./tpl/header.html')
+    <script src="./static/lib/d3@6.js"></script>
+    <script src="./static/lib/markmap-view.js"></script>
+    <script src="./static/js/main.js"></script>
+    <style>
+      .markmap-svg{
+        width: calc(100vw - 40px);
+        height: calc(100vh - 66px);
+      }
+    </style>
+  </head>
+
+  <body>
+    @@include('./tpl/nav.html')
+    <section>
+      <svg id="markmap" class="markmap-svg"></svg>
+    </section>
+    @@include('./tpl/footer.html')
+  </body>
+</html>

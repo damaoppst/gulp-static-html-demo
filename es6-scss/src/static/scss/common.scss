@@ -1,0 +1,65 @@
+@import "variable.scss";
+
+/* 重置样式 */
+html {
+    font-family: sans-serif;
+    font-size: $common-font-size;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  a:link,a:visited,a:hover,a:active {
+    text-decoration: none;
+    color: $common-font-color;
+  }
+  
+/* 底部 */
+.footer-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-color:#5bbe8e;;
+}
+
+.footer-box .content {
+  font-size: $small-font-size;
+  color: #fff;
+}
+
+
+/* 头部 */
+.header{
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  color: $common-font-color;
+  box-shadow: 0 4px 4px #f9f9fc;
+  .box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10%;
+    .logo {
+        font-size: 16px;
+    }
+    a:link,a:visited,a:hover,a:active {
+        color: $common-font-color;
+    }
+  }
+  .opr-box{
+    display: flex;
+    align-items: center;
+    color: $common-font-color;
+    .item{
+        font-size: $medium-font-size;
+        margin-right: 10px;
+      }
+  }
+}
+

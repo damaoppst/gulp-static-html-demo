@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* 背景颜色 */
+/* 字体 */
+/*普通字体颜色*/
+/* 重置样式 */
+html {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: #5bbe8e;
+}
+
+/* 底部 */
+.footer-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-color: #5bbe8e;
+}
+
+.footer-box .content {
+  font-size: 12px;
+  color: #fff;
+}
+
+/* 头部 */
+.header {
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  color: #5bbe8e;
+  box-shadow: 0 4px 4px #f9f9fc;
+}
+.header .box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10%;
+}
+.header .box .logo {
+  font-size: 16px;
+}
+.header .box a:link, .header .box a:visited, .header .box a:hover, .header .box a:active {
+  color: #5bbe8e;
+}
+.header .opr-box {
+  display: flex;
+  align-items: center;
+  color: #5bbe8e;
+}
+.header .opr-box .item {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+/* 内容 */
+/* 弹层 */
+.mark-box {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.mark-box .dialog-box {
+  width: 30%;
+  height: 400px;
+  background-color: #fff;
+  border: 1px solid #f9f9fc;
+  border-radius: 10px;
+}
+
+.show-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide-dialog {
+  display: none;
+}
