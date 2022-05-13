@@ -12,6 +12,11 @@ var clean = require("gulp-clean");
 
 var fileinclude = require("gulp-file-include");
 
+
+var babel = require('gulp-babel');
+var webpack = require('webpack-stream');
+var sourceMap = require('gulp-sourcemaps');
+var webpackConfig = require ("./webpack/webpack.config.js");
 // 创建
 gulp.task("connect", function () {
   connect.server({
@@ -74,20 +79,14 @@ gulp.task("watchs", function () {
 });
 
 
-var babel = require('gulp-babel');
-var webpack = require('webpack-stream');
-var sourceMap = require('gulp-sourcemaps');
+
 gulp.task('script', () => {
   return gulp.src('src/static/js/*.js')
   .pipe( sourceMap.init() )
   .pipe(babel({
     presets: ['@babel/preset-env']
   }))
-  .pipe(webpack({
-    output: {
-      filename: 'main.js'
-    }
-  }))
+  .pipe(webpack(webpackConfig))
   .pipe(sourceMap.write()) 
   .pipe(gulp.dest('dist/static/js/'))
   .pipe(connect.reload()); //更新;
