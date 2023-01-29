@@ -1,5 +1,5 @@
 {
-  "name": "blog-theme-simple",
+  "name": "gulp-static-html-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://git.ppst.top/statichtml/blog-theme-simple.git"
+    "url": "http://git.ppst.top/gulp-static-html-demo.git"
   },
   "keywords": [
     "static",
